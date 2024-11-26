@@ -1,0 +1,89 @@
+/* reset css */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+#main {
+
+}
+
+#header {
+    height: 46px;
+    background-color: #000;
+}
+
+#nav, .subnav {
+    list-style-type: none;
+}
+
+#nav > li {
+    display: inline-block;
+}
+
+#nav li {
+    position: relative;
+}
+
+#nav > li > a {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#nav li a {
+    /* gạch chân chữ là underline thì nếu không muốn có gạch chân thì để none */
+    text-decoration: none;
+    color: #fff;
+    line-height: 46px;
+    padding: 0 24px;
+    display: block;
+    /* ps 3: đã sửa 12px thành 0 và thêm display block */
+    /* lý do w3s để 12px trên dưới là vì background color tràn cả trên cả dưới, nếu để 0px thì không thể tràn màu được */
+    /* lưu ý dòng này sau nếu sửa viền của header button */
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+/* đoạn này li:hover nếu không có a thì vẫn tràn viền được, note để sau thử nghiệm */
+#nav > li:hover > a,
+#nav .subnav li:hover a {
+    color: #000;
+    background-color: #ccc;
+}
+
+#nav .subnav {
+    display: none;
+    min-width: 160px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav .subnav a {
+    color: #000;
+    padding: 0 12px;
+    line-height: 38px;
+    /* note */
+}
+
+#slider {
+    min-height: 500px;
+    background-color: #333;
+}
+
+#content {
+
+}
+
+#footer {
+
+}
