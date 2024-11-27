@@ -14,8 +14,14 @@ html {
 }
 
 #header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     height: 46px;
     background-color: #000;
+    z-index: 1;
+    /* z-index là với trường hợp heading bị chìm bởi slider hoặc 1 trường hợp tương tự nào đó */
 }
 
 #nav {
@@ -100,8 +106,32 @@ html {
 }
 
 #slider {
-    min-height: 500px;
-    background-color: #333;
+    /* padding top 50% có nghĩa là chiều dọc bằng 50% chiều ngang */
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url(/assets/img/slider/1724504366269.jpg) top center / cover no-repeat;
+}
+
+#slider .text-content {
+    position: absolute;
+    bottom: 47px;
+    color: #ff0000;
+    left: 50%;
+    transform: translateX(-50%);
+    /* width: 100%; */
+    /* có thể dùng left 0, right 0 cũng căn giữa được */
+    /* mỗi cách dùng cho các trường hợp khác nhau */
+    text-align: center;
+}
+#slider .text-heading {
+    /* weight là khoảng cách các chữ */
+    font-weight: 500;
+    font-size: 24px;
+}
+#slider .text-description {
+    font-size: 15px;
+    margin-top: 25px;
 }
 
 #content {
